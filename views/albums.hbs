@@ -1,0 +1,27 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a
+                href="/artists/?artist={{albums.0.artists.0.name}}">{{albums.0.artists.0.name}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Albums</li>
+    </ol>
+</nav>
+<div class="container content">
+    <div class="row">
+        {{#each albums}}
+        <div class="col-md-3">
+            <div class="card">
+                {{#if images.0.url}}
+                <img src="{{images.0.url}}" class="card-img-top" alt="album cover">
+                {{else}}
+                <img src="images/transferir.png" class="card-img-top" alt="album cover">
+                {{/if}}
+                <div class="card-body">
+                    <h6 class="card-title">{{name}}</h6>
+                    <a href="/tracks/{{this.name}}/{{id}}" class="btn btn-primary">View Tracks</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

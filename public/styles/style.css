@@ -1,0 +1,59 @@
+body {
+    color: black;
+}
+
+h2 {
+    color: #007bff;
+
+}
+
+
+.card {
+    padding: 0.5em;
+    margin: 0.1em;
+}
+
+.content {
+    margin: auto;
+    margin-top: 3em;
+}
+
+.card {
+    max-height: min-content;
+}
+
+.home {
+    background: url("/images/spotify-background.jpeg");
+    filter: grayscale(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-wrapper {
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+form {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.artist-input {
+    width: 25em;
+    margin-bottom: 2em;
+}
+
+.navbar {
+    margin-bottom: 3em;
+}
+
+.track-name {
+    border-top: 1px solid lightgray;
+    padding-top: 1em;
+}

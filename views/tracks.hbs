@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a
+                href="/artists/?artist={{tracks.0.artists.0.name}}">{{tracks.0.artists.0.name}}</a></li>
+        <li class="breadcrumb-item"><a href="/albums/{{tracks.0.artists.0.id}}">Albums</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{albumName}}</li>
+    </ol>
+</nav>
+<div class="container">
+    {{#each tracks}}
+    <div class="row">
+        <div class="col-8 track-name">
+            <h6>{{track_number}} - {{name}}</h6>
+        </div>
+        <div class="col-4">
+            <audio controls src="{{preview_url}}"></audio>
+        </div>
+    </div>
+    {{/each}}
+</div>
